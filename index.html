@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Not Takip</title>
-  <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RGPYR4YRG8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-RGPYR4YRG8');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Takip</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>🎓 Not Takip Portalı</h2>
-    
-    <div class="ozet-kutu">
-      <div class="stat-card"><span>GNO</span><h3 id="gnoGosterge">0.00</h3></div>
-      <div class="stat-card"><span>Toplam</span><h3 id="toplamDersGosterge">0</h3></div>
-      <div class="stat-card"><span>Başarılı</span><h3 id="basariliDersGosterge">0</h3></div>
+    <div class="container">
+        <h2>Not Takip Portalı</h2>
+
+        <div class="ozet-kutu">
+            <div class="stat-card"><span>GNO</span><h3 id="gnoGosterge">0.00</h3></div>
+            <div class="stat-card"><span>Toplam</span><h3 id="toplamDersGosterge">0</h3></div>
+            <div class="stat-card"><span>Başarılı</span><h3 id="basariliDersGosterge">0</h3></div>
+        </div>
+
+        <form id="dersFormu">
+            <input type="text" id="dersAdi" placeholder="Ders Adı" required>
+            <div class="form-row">
+                <input type="number" id="vize" placeholder="Vize Notu" min="0" max="100" required>
+                <input type="number" id="final" placeholder="Final Notu" min="0" max="100" required>
+            </div>
+            <button type="submit" class="btn">Ders Ekle</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ders</th>
+                    <th>Ort.</th>
+                    <th>Harf</th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody id="dersListesi"></tbody>
+        </table>
     </div>
-
-    <form id="dersForm">
-      <input type="text" id="dersAdi" placeholder="Ders Adı" required>
-      <div class="form-row">
-        <input type="number" id="vize" placeholder="Vize Notu" min="0" max="100" required>
-        <input type="number" id="final" placeholder="Final Notu" min="0" max="100" required>
-      </div>
-      <button type="submit" class="btn">+ Ders Ekle</button>
-    </form>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Ders</th>
-          <th>Ort.</th>
-          <th>Harf</th>
-          <th>İşlem</th>
-        </tr>
-      </thead>
-      <tbody id="dersListesi"></tbody>
-    </table>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
